@@ -11,8 +11,8 @@ You will:
 1. Clone the repository
 2. Create a Python virtual environment
 3. Install dependencies from [`requirements.txt`](requirements.txt)
-4. Add your `OPENAI_API_KEY` using a `.env` file
-5. Run [`checkpoint-0/hello-openai.py`](checkpoint-0/hello-openai.py)
+4. Complete your `OPENAI_API_KEY` in the `.env` file
+5. Run [`checkpoint-0/hello-openai.py`](checkpoint-0/hello-openai.py) to test the endpoint
 
 ---
 
@@ -20,14 +20,9 @@ You will:
 
 ### 1. Clone the repository
 
-Use **either** HTTPS or SSH.
-
 ```bash
 # HTTPS
-git clone https://github.com/<org>/<repo>.git
-
-# SSH
-git clone git@github.com:<org>/<repo>.git
+git clone https://github.com/TMU-AI/MCU-x-AIMLA-How-To-Build-JARVIS.git
 ```
 
 ---
@@ -37,19 +32,18 @@ git clone git@github.com:<org>/<repo>.git
 From your terminal:
 
 ```bash
-cd <repo>
+cd MCU-x-AIMLA-How-To-Build-JARVIS
 ```
 
 ---
 
 ### 3. Create and activate a virtual environment (`.venv`)
 
-Create the environment **from the repository root** (`<repo>`), then activate it.
+Create the environment **from the repository root** (`MCU-x-AIMLA-How-To-Build-JARVIS/`), then activate it.
 
 #### macOS / Linux
 
 ```bash
-cd <repo>
 python -m venv .venv
 source .venv/bin/activate
 ```
@@ -57,7 +51,6 @@ source .venv/bin/activate
 #### Windows (PowerShell)
 
 ```powershell
-cd <repo>
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
@@ -80,7 +73,7 @@ python -m pip install -r requirements.txt
 
 This checkpoint loads environment variables via [`dotenv.load_dotenv()`](checkpoint-0/hello-openai.py:4).
 
-Enter the file `.env` in the **repository root** (`<repo>/.env`) and view the environment variable `OPENAI_API_KEY`.
+Enter the file `.env` in the **repository root** and view the environment variable `OPENAI_API_KEY`.
 
 This API key is shared across the workshop, but is incomplete for security reasons. **Complete it with the characters provided by your instructor.**
 
@@ -97,15 +90,15 @@ Do not commit your key.
 Run from inside `checkpoint-0/`:
 
 ```bash
-cd <repo>/checkpoint-0/
+cd checkpoint-0
 python hello-openai.py
 ```
 
-Or run from the project root:
+Or run from the project root `MCU-x-AIMLA-How-To-Build-JARVIS/`:
 
 ```bash
-cd <repo>
 python checkpoint-0/hello-openai.py
+```
 
 ---
 
@@ -159,14 +152,14 @@ Symptoms: authentication errors from the OpenAI API.
 
 Fix:
 
-1. Confirm you created `<repo>/.env`
+1. Confirm that `<repo>/.env` exists
 2. Ensure it contains:
 
 ```bash
 OPENAI_API_KEY=your_key_goes_here
 ```
-
-3. Re-run the script from [`checkpoint-0/`](checkpoint-0/README.md)
+3. The default key is **incomplete**. Ask your instructor for the remaining characters.
+4. Re-run the script from [`checkpoint-0/`](checkpoint-0/README.md)
 
 ### Dependency install failures
 
