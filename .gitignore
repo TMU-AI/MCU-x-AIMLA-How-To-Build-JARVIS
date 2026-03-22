@@ -1,3 +1,10 @@
 complete.env
 .venv
 .env
+create_user_api_keys.py
+workshop_keys.csv
+admin.venv
+.admin/shared_api_keys.txt
+.admin/assign_api_keys_round_robin.py
+plans/api-key-assignment-round-robin.md
+.admin/
